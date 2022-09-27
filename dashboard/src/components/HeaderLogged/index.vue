@@ -43,7 +43,7 @@ export default {
         return '...'
       }
 
-      return `${store.currentUser.name} {sair}`
+      return `${store.currentUser.name} (sair)`
     })
 
     function handleLogout () {
