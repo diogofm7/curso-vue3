@@ -139,7 +139,6 @@ export default {
       } catch (error) {
         state.isLoading = false
         state.hasErrors = !!error
-        console.log(error)
         toast.error('Ocorreu um erro ao fazer o login')
       }
     }

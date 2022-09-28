@@ -21,12 +21,11 @@ export default httpClient => ({
   },
 
   login: async ({ email, password }) => {
-    console.log('antes')
     const response = await httpClient.post('/auth/login', {
       email,
       password
     })
-    console.log('depois')
+
     let errors = null
 
     if (!response.data) {

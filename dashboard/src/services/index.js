@@ -29,10 +29,10 @@ httpClient.interceptors.response.use((response) => {
   setGlobalLoading(false)
   return response
 }, (error) => {
-  const conThrowAnError = error.response.status === 0 ||
-    error.response.status === 500
+  const canThrowAnError = error.request.status === 0 ||
+    error.request.status === 500
 
-  if (conThrowAnError) {
+  if (canThrowAnError) {
     setGlobalLoading(false)
     throw new Error(error.message)
   }
